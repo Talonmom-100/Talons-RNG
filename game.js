@@ -13,11 +13,10 @@ const rtable = new LootTable(
 )
 
 function roll(x) {
-    raritydisplay = ""
     loot = rtable.loot(x)
     console.table(loot)
-    for (let i = 0; i < (x - 1); i++) {
-        raritything = loot[0][i][0] + " x" + loot[0][i][1]
+    for (let i = 0; i < x; i++) {
+        raritything = loot[i][0] + " x" + loot[i][1]
         if (i < 1) {
             raritydisplay = raritything
         } else {
