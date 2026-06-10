@@ -1,4 +1,11 @@
 body {
     color: white;
     background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr {
+    width: 100%;
+    margin: 2rem;
+    border: 2px solid
 }
