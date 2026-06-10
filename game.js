@@ -1,8 +1,8 @@
 const { LootTable } = lootalot
 
-const loot
-var raritything
-var raritydisplay
+const loot;
+var raritything;
+var raritydisplay;
 
 const rtable = new LootTable(
     [
