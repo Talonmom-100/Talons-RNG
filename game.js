@@ -13,8 +13,5 @@ const rtable = new LootTable(
 
 function roll(x) {
     loot = rtable.loot(x)
-    for (let i = 0; i < (x - 1); i++) {
-        raritything = loot[0][i]
-        raritydisplay = raritydisplay + raritything
-    }
+    console.table(loot)
 }
