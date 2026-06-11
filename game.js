@@ -15,7 +15,7 @@ const rtable = new LootTable(
 function roll(x) {
     loot = rtable.loot(x)
     console.table(loot)
-    for (let i = 0; i < x; i++) {
+    for (let i = 0; i < loot.length; i++) {
         console.log(loot[i])
         raritything = loot[i].item + " x" + loot[i].count
         if (i < 1) {
