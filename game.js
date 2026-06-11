@@ -24,13 +24,13 @@ function roll(x) {
         } else {
             raritydisplay = raritydisplay + ", " + raritything
         }
-        if (loot[i].item = "Common") {
+        if (loot[i].item == "Common") {
             luckpoints += loot[i].count
-        } else if (loot[i].item = "Uncommon") {
+        } else if (loot[i].item == "Uncommon") {
             luckpoints += 3 * loot[i].count
-        } else if (loot[i].item = "Rare") {
+        } else if (loot[i].item == "Rare") {
             luckpoints += 9 * loot[i].count
-        } else if (loot[i].item = "Epic") {
+        } else if (loot[i].item == "Epic") {
             luckpoints += 27 * loot[i].count
         }
     }
