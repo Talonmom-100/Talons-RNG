@@ -10,3 +10,9 @@ hr {
     margin: 2rem;
     border: 2px solid
 }
+
+button {
+    border: 2px solid white;
+    background-color: black;
+    color: white
+}
