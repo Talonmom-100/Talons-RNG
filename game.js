@@ -17,7 +17,7 @@ function roll(x) {
     console.table(loot)
     for (let i = 0; i < x; i++) {
         console.log(loot[i])
-        raritything = loot[i][0] + " x" + loot[i][1]
+        raritything = loot[i].item + " x" + loot[i].count
         if (i < 1) {
             raritydisplay = raritything
         } else {
