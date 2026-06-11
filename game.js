@@ -4,6 +4,7 @@ var loot
 var raritything
 var raritydisplay
 var rollcount = 1
+var luckpoints = 0
 
 const rtable = new LootTable(
     [
@@ -23,6 +24,16 @@ function roll(x) {
         } else {
             raritydisplay = raritydisplay + ", " + raritything
         }
+        if (loot[i].item = "Common") {
+            luckpoints += loot[i].count
+        } else if (loot[i].item = "Uncommon") {
+            luckpoints += 3 * loot[i].count
+        } else if (loot[i].item = "Rare") {
+            luckpoints += 9 * loot[i].count
+        } else if (loot[i].item = "Epic") {
+            luckpoints += 27 * loot[i].count
+        }
     }
     document.getElementById("raritydisplaytext").innerHTML = "You got: " + raritydisplay
+    document.getElementById("luckpointcount").innerHTML = "Luck Points: " + luckpoints
 }
