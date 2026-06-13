@@ -17,3 +17,14 @@ button {
     background-color: black;
     color: white
 }
+
+table {
+    border-spacing: 4px;
+}
+
+td {
+    border-radius: 2px;
+    border: 2px solid white;
+    height: 4rem;
+    width: 4rem;
+}

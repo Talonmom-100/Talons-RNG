@@ -5,6 +5,8 @@ var raritything
 var raritydisplay
 var rollcount = 1
 var luckpoints = 0
+var cost11 = 50
+var desc11 = "Increases roll count by 1."
 
 const rtable = new LootTable(
     [
@@ -36,4 +38,20 @@ function roll(x) {
     }
     document.getElementById("raritydisplaytext").innerHTML = "You got: " + raritydisplay
     document.getElementById("luckpointcount").innerHTML = "Luck Points: " + luckpoints
+}
+
+function getUpgrade(x) {
+    if (x == 11) {
+        if (luckpoints >= cost11) {
+            rollcount++
+            luckpoints -= cost11
+            cost11 *= 10
+            document.getElementById("rollcountdisplay").innerHTML = "Roll count: " + rollcount
+        }
+    }
+    document.getElementById("luckpointcount").innerHTML = "Luck Points: " + luckpoints
+}
+
+function setDesc(x) {
+    document.getElementById("upgradedesc").innerHTML = x
 }

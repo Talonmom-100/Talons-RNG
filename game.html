@@ -13,8 +13,19 @@
   <h1>Talon's RNG</h1>
   <h3>The RNG game with many rarities.</h3>
   <hr>
+  <p id="rollcountdisplay">Roll count: 1</p>
   <p id="raritydisplaytext">Nothing has been rolled yet!</p>
   <button onclick="roll(rollcount)">Roll!</button>
   <hr>
   <h4 id="luckpointcount">Luck Points: 0</h4>
+  <p id="upgradedesc">Hover over an upgrade to see its description!</p>
+  <table>
+    <tbody>
+      <tr>
+        <td onclick="getUpgrade(11)" onmouseenter="setDesc(desc11)">
+          11
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </body>
