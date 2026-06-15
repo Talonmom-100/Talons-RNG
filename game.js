@@ -55,3 +55,7 @@ function getUpgrade(x) {
 function setDesc(x) {
     document.getElementById("upgradedesc").innerHTML = x
 }
+
+function setCostDesc(x) {
+    document.getElementById("upgradecost").innerHTML = "Cost: " + x
+}
