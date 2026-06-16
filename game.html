@@ -18,6 +18,7 @@
   <button onclick="roll(rollcount)">Roll!</button>
   <hr>
   <h4 id="luckpointcount">Luck Points: 0</h4>
+  <h5 id="lpmdisplay">Luck Point Multi: 3</h5>
   <p id="upgradedesc">Hover over an upgrade to see its description!</p>
   <p id="upgradecost">Hover over an upgrade to see its cost!</p>
   <table>
@@ -25,6 +26,9 @@
       <tr>
         <td onclick="getUpgrade(11)" onmouseenter="setDesc(desc11); setCostDesc(cost11)">
           11
+        </td>
+        <td onmouseenter="setDesc(desc12); setCostDesc(cost12)">
+          12
         </td>
       </tr>
     </tbody>

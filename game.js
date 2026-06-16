@@ -4,9 +4,12 @@ var loot
 var raritything
 var raritydisplay
 var rollcount = 1
+var luckpointmulti = 3
 var luckpoints = 0
 var cost11 = 50
 var desc11 = "Increases roll count by 1."
+var cost12 = 1500
+var desc12 = "Increases the multiplier of luck points gotten from a rarity from one rarity to the next by 1."
 
 const rtable = new LootTable(
     [
@@ -29,11 +32,11 @@ function roll(x) {
         if (loot[i].item == "Common") {
             luckpoints += loot[i].count
         } else if (loot[i].item == "Uncommon") {
-            luckpoints += 3 * loot[i].count
+            luckpoints += (luckpointmulti) * loot[i].count
         } else if (loot[i].item == "Rare") {
-            luckpoints += 9 * loot[i].count
+            luckpoints += (luckpointmulti ** 2) * loot[i].count
         } else if (loot[i].item == "Epic") {
-            luckpoints += 27 * loot[i].count
+            luckpoints += (luckpointmulti ** 3) * loot[i].count
         }
     }
     document.getElementById("raritydisplaytext").innerHTML = "You got: " + raritydisplay
@@ -47,6 +50,16 @@ function getUpgrade(x) {
             luckpoints -= cost11
             cost11 *= 10
             document.getElementById("rollcountdisplay").innerHTML = "Roll count: " + rollcount
+            document.getElementById("upgradecost").innerHTML = "Cost: " + cost11
+        }
+    }
+    if (x == 12) {
+        if (luckpoints >= cost12) {
+            luckpointmulti++
+            luckpoints -= cost12
+            cost12 *= 5
+            document.getElementById("upgradecost").innerHTML = "Cost: " + cost12
+            document.getElementById("lpmdisplay").innerHTML = "Luck Point Multi: " + luckpointmulti
         }
     }
     document.getElementById("luckpointcount").innerHTML = "Luck Points: " + luckpoints
